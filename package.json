@@ -1,0 +1,23 @@
+{
+  "name": "micro-sendgrid",
+  "version": "1.0.0",
+  "description": "A tiny microservice for SendGrid",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro",
+    "dev": "nodemon --exec 'micro .'"
+  },
+  "author": "Jake Moxey",
+  "license": "MIT",
+  "dependencies": {
+    "@sendgrid/mail": "^6.1.4",
+    "joi": "^11.1.1",
+    "micro": "^9.0.0",
+    "micro-boom": "^1.1.0",
+    "micro-joi": "^1.0.2",
+    "microrouter": "^2.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
