@@ -10,7 +10,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const validator = validation(Joi.object({
 	to: Joi.string().email().required(),
 	message: Joi.string().min(1).max(500).required()
-}))
+}));
 
 const sendMail = async (req, res) => {
 	const body = await json(req);
@@ -30,4 +30,4 @@ const sendMail = async (req, res) => {
 
 module.exports = router(
   post('/send', handleErrors(validator(sendMail)))
-)
+);
